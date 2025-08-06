@@ -44,4 +44,35 @@ console.log(person.name);
 console.log(person.role); 
 // Prints: 'Software Engineer'
 
+//Review: Apply the spread operator on arrays
+const originalArray = [1, 2, 3];
+const duplicateArray = [...originalArray];
 
+console.log(duplicateArray); 
+// Prints: [1, 2, 3]
+duplicateArray.push(4); 
+// Using spread created a *copy* of the `originalArray`
+// Changing it doesn't also change `originalArray`
+
+console.log(duplicateArray); 
+// Prints: [1, 2, 3, 4]
+console.log(originalArray); 
+// Prints: [1, 2, 3]
+const originalArray = [1, 2, 3];
+const referenceArray = originalArray; 
+// referenceArray a reference to originalArray (not a copy)
+
+referenceArray.push(4); 
+// This means modifying `referenceArray` also modifies `originalArray`
+
+console.log(referenceArray); 
+// Prints: [1, 2, 3, 4]
+console.log(originalArray);
+// Prints: [1, 2, 3, 4]
+const fruits = ['apple', 'orange', 'banana'];
+const vegetables = ['broccoli', 'carrot', 'spinach'];
+
+const fruitsAndVegetables = [...fruits, ...vegetables];
+
+console.log(fruitsAndVegetables); 
+// Prints: ['apple', 'orange', 'banana', 'broccoli', 'carrot', 'spinach']
