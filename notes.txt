@@ -1,0 +1,47 @@
+// Review: The map() iterator method of arrays
+
+const flavors = ['vanilla', 'chocolate', 'strawberry'];
+
+const iceCreamFlavors = flavors.map((flavor) => {
+  return `${flavor} ice cream`;
+});
+console.log(iceCreamFlavors); 
+// Prints: ['vanilla ice cream', 'chocolate ice cream', 'strawberry ice cream']
+
+// Review: Array Destructuring
+const petsArray = ['Rover', 'Snuffles', 'Toto', 'Spot'];
+
+const [firstPet, secondPet] = petsArray;
+
+console.log(firstPet);
+// Prints: 'Rover'
+console.log(secondPet);
+// Prints: 'Snuffles'
+
+// Equivalent in traditional bracket notation:
+console.log(petsArray[0]);
+// Prints: 'Rover'
+console.log(petsArray[1]);
+// Prints: 'Snuffles'
+
+// REview: Object Destructuring
+const person = {
+  name: 'Alex',
+  role: 'Software Engineer',
+};
+
+// Object destructuring:
+const { name, role } = person;
+
+console.log(name);
+// Prints: 'Alex'
+console.log(role);
+// Prints: 'Software Engineer'
+
+// Equivalent in traditional dot notation:
+console.log(person.name); 
+// Prints: 'Alex'
+console.log(person.role); 
+// Prints: 'Software Engineer'
+
+
